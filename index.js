@@ -3,10 +3,15 @@ const TelegramBot = require('node-telegram-bot-api')
 const TOKEN = '6522253030:AAERyOphTX34pacqrJr8tCCMAG0euysYLBU'
 
 const bot = new TelegramBot(TOKEN, {
-  polling: true,
+  polling: {
+    interval: 300,
+    autoStart: true,
+    params: {
+      timeout: 10,
+    },
+  },
 })
 
 bot.on('message', (msg) => {
-  console.log(msg)
-  bot.sendMessage(msg.chat.id, 'Hello ' + msg.from.first_name)
+  bot.sendMessage(msg.chat.id, 'I am alive!!!') // test
 })

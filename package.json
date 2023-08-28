@@ -6,6 +6,9 @@
   "repository": "https://github.com/a-gran/nr-support-bot.git",
   "author": "Aristarh Gran <awebdeff@gmail.com>",
   "license": "ISC",
+  "scripts": {
+    "start": "node index.js"
+  },
   "devDependencies": {
     "jest": "^29.6.4",
     "prettier": "^3.0.2"
