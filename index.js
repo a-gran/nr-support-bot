@@ -1,6 +1,6 @@
 const TelegramBot = require('node-telegram-bot-api')
 
-const TOKEN = '6606993976:AAGgYN_4-VMc_zi1IX5gAzEZOJvl2Pgt-Mk'
+const TOKEN = '6522253030:AAERyOphTX34pacqrJr8tCCMAG0euysYLBU'
 
 const bot = new TelegramBot(TOKEN, {
   polling: true,
@@ -8,5 +8,5 @@ const bot = new TelegramBot(TOKEN, {
 
 bot.on('message', (msg) => {
   console.log(msg)
-  bot.sendMessage(msg.chat.id, 'Hello')
+  bot.sendMessage(msg.chat.id, 'Hello ' + msg.from.first_name)
 })
