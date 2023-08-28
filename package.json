@@ -1,0 +1,16 @@
+{
+  "name": "nr-support-bot",
+  "version": "0.1.0",
+  "description": "Support telegram bot for Namaruci project",
+  "main": "index.js",
+  "repository": "https://github.com/a-gran/nr-support-bot.git",
+  "author": "Aristarh Gran <awebdeff@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.6.4",
+    "prettier": "^3.0.2"
+  },
+  "dependencies": {
+    "node-telegram-bot-api": "^0.61.0"
+  }
+}
