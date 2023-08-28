@@ -2,6 +2,8 @@ const TelegramBot = require('node-telegram-bot-api')
 
 const TOKEN = '6522253030:AAERyOphTX34pacqrJr8tCCMAG0euysYLBU'
 
+console.log('Starting bot...')
+
 const bot = new TelegramBot(TOKEN, {
   polling: {
     interval: 300,
