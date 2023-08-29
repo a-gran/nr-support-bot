@@ -7,10 +7,7 @@
   "author": "Aristarh Gran <awebdeff@gmail.com>",
   "license": "ISC",
   "scripts": {
-    "start": "pm2 start index.js",
-	"stop": "pm2 stop index.js",
-	"restart": "pm2 restart index.js",
-	"monit": "pm2 monit index.js"
+	"start": "node index.js"
   },
   "devDependencies": {
     "jest": "^29.6.4",
