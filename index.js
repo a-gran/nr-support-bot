@@ -13,5 +13,12 @@ const bot = new TelegramBot(TOKEN, {
 })
 
 bot.on('message', (msg) => {
-    bot.sendMessage(msg.chat.id, 'Message!')
+    const html = `
+		<i><strong>Hello, ${msg.from.first_name}</strong></i>
+		<pre>${debug(msg)}</pre>
+	`
+
+    bot.sendMessage(msg.chat.id, html, {
+        parse_mode: 'HTML',
+    })
 })
