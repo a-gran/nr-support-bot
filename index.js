@@ -15,12 +15,10 @@ const bot = new TelegramBot(TOKEN, {
 })
 
 bot.on('message', (msg) => {
-    const markdown = `
-		*Hello, ${msg.from.first_name}!*
-		_Italic text_
-	`
-
-    bot.sendMessage(msg.chat.id, markdown, {
-        parse_mode: 'Markdown',
-    })
+    setTimeout(() => {
+        bot.sendMessage(msg.chat.id, `https://core.telegram.org/bots/api`, {
+            disable_web_page_preview: true,
+            disable_notification: true,
+        })
+    }, 4000)
 })
