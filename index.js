@@ -2,6 +2,8 @@ const TelegramBot = require('node-telegram-bot-api')
 const debug = require('./helpers')
 const TOKEN = '6522253030:AAERyOphTX34pacqrJr8tCCMAG0euysYLBU'
 
+console.log('Bot is running...')
+
 const bot = new TelegramBot(TOKEN, {
     polling: {
         interval: 300,
@@ -13,12 +15,12 @@ const bot = new TelegramBot(TOKEN, {
 })
 
 bot.on('message', (msg) => {
-    const html = `
-		<i><strong>Hello, ${msg.from.first_name}</strong></i>
-		<pre>${debug(msg)}</pre>
+    const markdown = `
+		*Hello, ${msg.from.first_name}!*
+		_Italic text_
 	`
 
-    bot.sendMessage(msg.chat.id, html, {
-        parse_mode: 'HTML',
+    bot.sendMessage(msg.chat.id, markdown, {
+        parse_mode: 'Markdown',
     })
 })
